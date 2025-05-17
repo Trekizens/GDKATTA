@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGKATTA - Social Media Marketing Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .testimonial-card {
+            background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+        }
+        .pricing-card:hover {
+            transform: scale(1.03);
+        }
+        .featured-plan {
+            border: 2px solid #8B5CF6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-indigo-600">DGKATTA</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                <a href="#services" class="text-gray-700 hover:text-indigo-600 transition">Services</a>
+                <a href="#why-us" class="text-gray-700 hover:text-indigo-600 transition">Why Us</a>
+                <a href="#portfolio" class="text-gray-700 hover:text-indigo-600 transition">Portfolio</a>
+                <a href="#pricing" class="text-gray-700 hover:text-indigo-600 transition">Pricing</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+            </div>
+            <button class="md:hidden text-gray-700 focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white w-full py-3 px-4 shadow-inner" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                <a href="#services" class="text-gray-700 hover:text-indigo-600 transition">Services</a>
+                <a href="#why-us" class="text-gray-700 hover:text-indigo-600 transition">Why Us</a>
+                <a href="#portfolio" class="text-gray-700 hover:text-indigo-600 transition">Portfolio</a>
+                <a href="#pricing" class="text-gray-700 hover:text-indigo-600 transition">Pricing</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Grow Your Brand with <span class="text-yellow-300">DGKATTA</span></h1>
+                    <p class="text-lg md:text-xl mb-8">We help businesses build strong online presence through powerful social media marketing.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="bg-white text-indigo-600 font-medium py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition flex items-center justify-center">
+                            <span class="mr-2">📞</span> Book a Free Consultation
+                        </a>
+                        <a href="#contact" class="bg-indigo-800 text-white font-medium py-3 px-6 rounded-lg shadow-lg hover:bg-indigo-900 transition flex items-center justify-center">
+                            <span class="mr-2">📧</span> Contact Us Now
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <svg class="w-full h-auto" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" y="50" width="400" height="300" rx="20" fill="#f0f4ff" />
+                        <circle cx="250" cy="200" r="80" fill="#c7d2fe" />
+                        <path d="M200,150 Q250,100 300,150 T400,150" stroke="#818cf8" stroke-width="8" fill="none" />
+                        <path d="M100,250 Q150,200 200,250 T300,250" stroke="#818cf8" stroke-width="8" fill="none" />
+                        <circle cx="150" cy="150" r="20" fill="#6366f1" />
+                        <circle cx="350" cy="250" r="20" fill="#6366f1" />
+                        <circle cx="380" cy="120" r="15" fill="#6366f1" />
+                        <circle cx="120" cy="280" r="15" fill="#6366f1" />
+                        <text x="220" y="205" font-family="Arial" font-size="24" fill="#4338ca">DGKATTA</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">📌 Who We Are</h2>
+                <div class="w-24 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <p class="text-lg text-gray-700 text-center">
+                    At <span class="font-semibold text-indigo-600">DGKATTA</span>, we are a creative digital media team passionate about helping brands grow online. Whether you're a small business, a creator, or a startup, we offer tailor-made strategies that connect your business with the right audience—across platforms like Instagram, Facebook, YouTube, LinkedIn, and more.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">💼 What We Do</h2>
+                <div class="w-24 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+                    <div class="text-3xl mb-4">📱</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Social Media Management</h3>
+                    <p class="text-gray-600">Daily/Weekly posting, growth tracking & community building</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+                    <div class="text-3xl mb-4">🎯</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Ad Campaigns</h3>
+                    <p class="text-gray-600">Facebook, Instagram & Google Ads with target-focused ROI</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+                    <div class="text-3xl mb-4">🎨</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Content Creation</h3>
+                    <p class="text-gray-600">Reels, graphics, videos & stories with trend-based ideas</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+                    <div class="text-3xl mb-4">📈</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Brand Strategy</h3>
+                    <p class="text-gray-600">Personalised content calendar & marketing strategy</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+                    <div class="text-3xl mb-4">📝</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Copywriting</h3>
+                    <p class="text-gray-600">Engaging captions, hashtags & campaign slogans</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white rounded-lg shadow-md p-6 service-card transition duration-300">
+                    <div class="text-3xl mb-4">🧩</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Influencer Collaboration</h3>
+                    <p class="text-gray-600">Get your brand featured through trusted voices</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">🧠 Why DGKATTA?</h2>
+                <div class="w-24 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex items-start p-4">
+                    <div class="text-green-500 text-2xl mr-4">✅</div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Personalized Strategies</h3>
+                        <p class="text-gray-600">Tailored solutions for every business size and industry</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start p-4">
+                    <div class="text-green-500 text-2xl mr-4">✅</div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Affordable & Transparent Pricing</h3>
+                        <p class="text-gray-600">Clear packages with no hidden costs</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start p-4">
+                    <div class="text-green-500 text-2xl mr-4">✅</div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Marathi + English Content</h3>
+                        <p class="text-gray-600">Bilingual content options to reach wider audiences</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start p-4">
+                    <div class="text-green-500 text-2xl mr-4">✅</div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Fast Turnaround Time</h3>
+                        <p class="text-gray-600">Quick delivery without compromising on quality</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start p-4 md:col-span-2">
+                    <div class="text-green-500 text-2xl mr-4">✅</div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">100% Local + Creative Team</h3>
+                        <p class="text-gray-600">A dedicated team that understands local market dynamics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">📂 Our Work</h2>
+                <div class="w-24 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Portfolio Item 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="bg-indigo-100 p-6">
+                        <svg class="w-full h-48" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="20" width="160" height="160" rx="10" fill="#e0e7ff" />
+                            <rect x="40" y="40" width="120" height="80" rx="5" fill="#818cf8" />
+                            <circle cx="70" cy="60" r="10" fill="#4f46e5" />
+                            <rect x="40" y="130" width="120" height="30" rx="5" fill="#818cf8" />
+                            <text x="100" y="150" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">Before & After</text>
+                        </svg>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Instagram Growth</h3>
+                        <p class="text-gray-600 text-sm">Before/After page improvements</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="bg-indigo-100 p-6">
+                        <svg class="w-full h-48" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="20" width="160" height="160" rx="10" fill="#e0e7ff" />
+                            <circle cx="100" cy="100" r="50" fill="#818cf8" />
+                            <polygon points="85,70 125,100 85,130" fill="#4f46e5" />
+                            <text x="100" y="170" font-family="Arial" font-size="12" fill="#4f46e5" text-anchor="middle">Reels Production</text>
+                        </svg>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Viral Reels</h3>
+                        <p class="text-gray-600 text-sm">Engaging video content</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="bg-indigo-100 p-6">
+                        <svg class="w-full h-48" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="20" width="160" height="160" rx="10" fill="#e0e7ff" />
+                            <rect x="30" y="40" width="40" height="120" rx="5" fill="#818cf8" />
+                            <rect x="80" y="40" width="40" height="120" rx="5" fill="#6366f1" />
+                            <rect x="130" y="40" width="40" height="120" rx="5" fill="#4f46e5" />
+                            <text x="100" y="170" font-family="Arial" font-size="12" fill="#4f46e5" text-anchor="middle">Carousel Posts</text>
+                        </svg>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Carousel Designs</h3>
+                        <p class="text-gray-600 text-sm">Swipeable content that converts</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="bg-indigo-100 p-6">
+                        <svg class="w-full h-48" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="20" width="160" height="160" rx="10" fill="#e0e7ff" />
+                            <circle cx="100" cy="80" r="40" fill="#818cf8" />
+                            <path d="M60,130 Q100,170 140,130" stroke="#4f46e5" stroke-width="8" fill="none" />
+                            <text x="100" y="170" font-family="Arial" font-size="12" fill="#4f46e5" text-anchor="middle">Brand Identity</text>
+                        </svg>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Logo & Branding</h3>
+                        <p class="text-gray-600 text-sm">Visual identity design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <p class="text-indigo-600 font-medium">Want to see more? Contact us on WhatsApp!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">💬 What Clients Say</h2>
+                <div class="w-24 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card rounded-lg p-6 shadow-md">
+                    <div class="text-3xl text-indigo-600 mb-4">🗣️</div>
+                    <p class="text-gray-700 mb-4 italic">"DGKATTA helped me take my page from 1K to 10K followers in 3 months!"</p>
+                    <p class="font-semibold text-gray-800">– Client Name, Business Owner</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card rounded-lg p-6 shadow-md">
+                    <div class="text-3xl text-indigo-600 mb-4">🗣️</div>
+                    <p class="text-gray-700 mb-4 italic">"Their reel ideas & ad campaigns are brilliant. Highly recommend!"</p>
+                    <p class="font-semibold text-gray-800">– Client Name, Café Owner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">💰 Our Plans</h2>
+                <div class="w-24 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Starter Plan -->
+                <div class="bg-white rounded-lg shadow-md p-6 pricing-card transition duration-300">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Starter</h3>
+                    <div class="text-3xl font-bold mb-4 text-indigo-600">₹4,999<span class="text-sm text-gray-500 font-normal">/month</span></div>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>8 posts/month</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>4 reels</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Basic analytics</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block text-center bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition">Get Started</a>
+                </div>
+                
+                <!-- Growth Plan -->
+                <div class="bg-white rounded-lg shadow-lg p-6 pricing-card featured-plan transition duration-300 transform scale-105">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-indigo-600 text-white px-4 py-1 rounded-full text-sm font-medium">Popular</div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Growth</h3>
+                    <div class="text-3xl font-bold mb-4 text-indigo-600">₹9,999<span class="text-sm text-gray-500 font-normal">/month</span></div>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>12 posts/month</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>6 reels</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>1 ad campaign</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Monthly reporting</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block text-center bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition">Get Started</a>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="bg-white rounded-lg shadow-md p-6 pricing-card transition duration-300">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Pro</h3>
+                    <div class="text-3xl font-bold mb-4 text-indigo-600">₹14,999<span class="text-sm text-gray-500 font-normal">/month</span></div>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Full management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Ad campaigns</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Strategy sessions</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Advanced analytics</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block text-center bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition">Get Started</a>
+                </div>
+            </div>
+            <div class="text-center mt-8 text-gray-600">
+                <p>*Custom packages available on request</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">📞 Let's Connect!</h2>
+                <div class="w-24 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-50 rounded-lg shadow-md p-8">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                            </div>
+                            <div>
+                                <label for="contact" class="block text-gray-700 mb-2">Email / Phone</label>
+                                <input type="text" id="contact" name="contact" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="business" class="block text-gray-700 mb-2">Business Type</label>
+                            <input type="text" id="business" name="business" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 transition">Send Message</button>
+                        </div>
+                    </form>
+                    
+                    <div class="mt-10 pt-8 border-t border-gray-200">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                            <a href="https://wa.me/919792332748" class="flex flex-col items-center hover:text-indigo-600 transition">
+                                <div class="text-3xl mb-2">📱</div>
+                                <div class="font-medium">WhatsApp Us</div>
+                                <div class="text-gray-600">+91 9792332748</div>
+                            </a>
+                            <a href="mailto:dgkatta@gmail.com" class="flex flex-col items-center hover:text-indigo-600 transition">
+                                <div class="text-3xl mb-2">📧</div>
+                                <div class="font-medium">Email Us</div>
+                                <div class="text-gray-600">dgkatta@gmail.com</div>
+                            </a>
+                            <div class="flex flex-col items-center">
+                                <div class="text-3xl mb-2">📍</div>
+                                <div class="font-medium">Location</div>
+                                <div class="text-gray-600">Pune, Maharashtra</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>Copyright © 2025 DGKATTA</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/DGKATTA/" class="hover:text-indigo-400 transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-indigo-400 transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385h-3.047v-3.47h3.047v-2.642c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.514c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385c5.737-.9 10.125-5.864 10.125-11.854z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-indigo-400 transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-6">
+                <p>Powered by <a href="https://www.instagram.com/DGKATTA/" class="text-indigo-400 hover:underline">DGKATTA</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const contact = document.getElementById('contact').value;
+            const business = document.getElementById('business').value;
+            const message = document.getElementById('message').value;
+            
+            // In a real implementation, you would send this data to your server
+            // For demo purposes, we'll just show an alert
+            alert(`Thank you, ${name}! Your message has been received. We'll contact you soon.`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9411654b032d4424',t:'MTc0NzQ2Njg4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
